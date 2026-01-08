@@ -12,6 +12,16 @@
    <!-- mobile specific metas
    ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap"
+    rel="stylesheet"
+	/>
+
+	<!-- Font Awesome -->
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	/>
 
  	<!-- CSS
    ================================================== -->
@@ -36,48 +46,89 @@
 
 	<!-- intro section
    ================================================== -->
-   <section id="intro">   
+   <section id="intro" class="modern-hero">
 
-   	<div class="intro-overlay"></div>	
+  <div class="hero-container">
 
-   	<div class="intro-content">
-   		<div class="row">
+    <!-- LEFT -->
+    <div class="hero-left">
+      <h1>
+        <span class="cursive-name">Hello, </span> I'm Nikitha
+        <span class="rotating-text" id="rotating-text">
+          I am a Software Engineer in AI
+        </span>
+      </h1>
 
-   			<div class="col-twelve">
+      
+        <div>
+          <strong>Currently</strong><br />
+          Masters in Computer Science @ University of Cincinnati
+        </div>
 
-	   			<h5>Hello, World.</h5>
-	   			<h1>I'm Nikitha Sharlene.</h1>
-                
+    </div>
 
-	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <img src="images/portfolio/prof.png" alt="pic" class="hero-avatar" />
 
-	   		</div>  
-   			
-   		</div>   		 		
-   	</div> <!-- /intro-content --> 
+      <h3>Nice to meet cha' 👋</h3>
+      <h4>
+        I’m a CS graduate student passionate about building AI-powered products,
+        scalable systems, and meaningful user experiences. I enjoy solving hard
+        problems and turning ideas into shipped software.
+	  </h4>
 
-   	<ul class="intro-social">        
-		<li><a href="https://www.linkedin.com/in/nikithasharlene/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-		<li><a href="https://github.com/Sharlene22" target="_blank"><i class="fa fa-github"></i></a></li>
-		<li><a href="https://www.reddit.com/user/your-username" target="_blank"><i class="fa fa-reddit"></i></a></li>
-	</ul> <!-- /intro-social -->
-	
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/nikithasharlene/" target="_blank">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Sharlene22" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+    </div>
 
-   </section> <!-- /intro -->
+  </div>
+
+</section>
+
+<!-- ROTATING TEXT SCRIPT -->
+<script>
+  const rotatingLines = [
+    "I am a Software Engineer in AI",
+    "I build AI-powered full-stack systems",
+    "I turn ideas into scalable products",
+    "I work across frontend & backend.",
+    "I love solving real-world problems"
+  ];
+
+  let i = 0;
+  const rotatingText = document.getElementById("rotating-text");
+
+  setInterval(() => {
+    rotatingText.classList.add("fade-out");
+
+    setTimeout(() => {
+      i = (i + 1) % rotatingLines.length;
+      rotatingText.textContent = rotatingLines[i];
+      rotatingText.classList.remove("fade-out");
+    }, 600);
+
+  }, 5000);
+</script>
+
 
    <!-- Portfolio Section
    ================================================== -->
    <!-- Projects Section -->
    
 	<section id="portfolio">
-
 		<div class="row section-intro">
    		<div class="col-twelve">
-
-   			<h5>Portfolio</h5>
+			
    			<h1>projects with a purpose.</h1>
 
-   			<p class="lead">Throughout my academic journey, I have been involved in a variety of projects that have allowed me to apply my knowledge and skills in practical, impactful ways. Explore my works below by click on each tab:</p>
+   			
 			   <div class="grid-container">
 				<!-- Card -->
 				<div class="card" id="expandable-card1">
@@ -221,7 +272,7 @@
 					</div>
 				</div>
 				  
-
+			</div>
 			</div>
    		</div>   		
    	</div> 
@@ -234,326 +285,121 @@
 
    	<div class="row section-intro">
    		<div>
-
-   			<h5>About</h5>
-   			<h1>Let me introduce myself.</h1>
-
-   			<div>
-
-   				<p class="lead">Hey there! I'm a passionate Computer Science master's student, 
-				currently diving deep into the world of coding and algorithms.My expertise ranges from programming and database management to algorithms and problem-solving, all honed through rigorous academic training and hands-on project experience. </p>
-   			</div>   			
-
-   		</div>   		
+   			
+   			<h1>industry stimulated experience.</h1>
+			<br><br>
+   			
    	</div> <!-- /section-intro -->
 
-   	<div class="row about-content">
+   	
+	<div class="projects-grid">
+  <div class="project-item">
+    <img src="images/portfolio/dvis.png" class="project-image" alt="Project 1">
 
+		<h3 class="project-title">
+		Thesis & Research Assistant
+		</h3>
 
-   		<div>
+		<p class="project-description">
+		Built AI-powered chatbot to address the challenge of interacting with complex datasets during live academic and industry meetings. Developing real-time analysis and visualization components using Python and React, improving visualization efficiency by 60% and increasing user engagement in data-driven discussions by 40%.
 
-   			<h3>Skills</h3>
-   			<p>With a robust foundation in computer science and a keen eye for detail, I have developed a diverse skill set that spans various areas of software development and technology. 
-				Below is an overview of the key skills I bring to the table:</p>
-				<div class="col-six tab-full">
-				<ul class="skill-bars">
-				   <li>
-				   	<div class="progress percent85"><span>85%</span></div>
-				   	<strong>JAVA, C</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
-				   	<strong>JAVASCRIPT, REACT</strong>
-				   </li>
-				   <li>
-					<div class="progress percent90"><span>90%</span></div>
-				   	<strong>LARGE LANGUAGE MODELS, API</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent87"><span>87%</span></div>
-				   	<strong>SQL & DATABASES</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent85"><span>85%</span></div>
-				   	<strong>DATA STRUCTURE ALGORITHMS</strong>
-				   </li>
-				   <li>
-					<div class="progress percent95"><span>95%</span></div>
-					<strong>FIREBASE BaaS</strong>
-				</li>
-      
-				</ul> <!-- /skill-bars -->	</div>	
-				<div class="col-six tab-full">
-					<ul class="skill-bars">
-					   <li>
-						   <div class="progress percent90"><span>90%</span></div>
-						   <strong>INTIATIVE & LEADERSHIP</strong>
-					   </li>
-					   <li>
-						   <div class="progress percent87"><span>87%</span></div>
-						   <strong>PROBLEM SOLVING</strong>
-					   </li>
-					   <li>
-						   <div class="progress percent95"><span>95%</span></div>
-						   <strong>INNOVATION </strong>
-					   </li>
-					   <li>
-						   <div class="progress percent95"><span>95%</span></div>
-						   <strong>COMMUNICATION & MENTORSHIP</strong>
-					   </li>
-					   <li>
-						   <div class="progress percent90"><span>90%</span></div>
-						   <strong>ADAPTABILITY</strong>
-					   </li>
-					   <li>
-						<div class="progress percent90"><span>84%</span></div>
-						<strong>CRITICAL THINKING</strong>
-					</li>
-		  
-					</ul> <!-- /skill-bars -->	</div>	
+		<p class="project-meta">Data Visualization Lab at UC · 2023-Present</p>
+	</div>
 
-   		</div>
+	<div class="project-item">
+		<img src="images/portfolio/hs.png" class="project-image" alt="Project 2">
 
-   	</div>
+		<h3 class="project-title">Software Engineer Fellowship </h3>
 
-   </section> <!-- /process-->    
+		<p class="project-description">
+		Delivered production-ready AI applications in a fast-paced startup environment by building full-stack systems with React, Next.js, REST APIs, and LLM integrations. Through agile sprints, CI/CD pipelines, and iterative feature development, the products scaled to 1,000+ users, improved customer support response times.
+		</p>
 
-   	<!-- services Section
+		<p class="project-meta">HeadStarter · 2024</p>
+	</div>
+
+	<div class="project-item">
+		<img src="images/portfolio/g.png" class="project-image" alt="Project 2">
+
+		<h3 class="project-title">Google Developer Techincal Lead</h3>
+
+		<p class="project-description">
+		Led the development of AI-powered web applications to streamline student learning, event management, and progress tracking across hackathons and workshops. By building scalable tools with React, Node.js, Firebase, and Python, supported 200+ students, reduced manual coordination work.
+		</p>
+
+		<p class="project-meta">VJIT · 2023</p>
+	</div>
+
+	<div class="project-item">
+		<img src="images/portfolio/starez.png" class="project-image" alt="Project 2">
+
+		<h3 class="project-title">IT Desk Assistant</h3>
+
+		<p class="project-description">
+		Optimized large-scale housing operations by analyzing check-in and access data for 10,000+ residents using Python, Pandas, and algorithmic techniques. These data-driven solutions helped detect anomalies, resolve system bottlenecks, and accelerate troubleshooting workflows.
+		</p>
+
+		<p class="project-meta">A&F Housing Operations at UC · 2024-Present</p>
+	</div>
+
+	<div class="project-item">
+		<img src="images/portfolio/women.png" class="project-image" alt="Project 2">
+
+		<h3 class="project-title">Women in AI</h3>
+
+		<p class="project-description">
+		Engaged in AI-focused technical discussions, workshops, and collaborative learning initiatives aimed at improving accessibility and representation in AI. By combining hands-on technical exploration with mentorship and peer collaboration, I contributed to inclusive learning environments.
+		</p>
+
+		<p class="project-meta">She Codes· 2023</p>
+	</div>
+
+	<div class="project-item">
+		<img src="images/portfolio/hack.png" class="project-image" alt="Project 2">
+
+		<h3 class="project-title">Techincal Secretary</h3>
+
+		<p class="project-description">
+		Designed and implemented full-stack systems to modernize event registration and engagement for large student communities. By building a QR-based check-in platform and a CMS-driven website, I helped scale events to 1,000+ attendees while increasing overall club engagement through streamlined operations and better visibility.
+		</p>
+
+		<p class="project-meta">UC Student Organizations · 2024-2025</p>
+	</div>
+
+	</div>
+
+</div>
+<!-- services Section
    ================================================== -->
 	<section id="bts">
 
 		<div class="overlay"></div>
-
-		<div class="row section-intro">
+		
+		<div class="row section-intro">  <img src="images/bts.png" alt="Behind the scenes" class="section-image">
    		  		
    	</div> <!-- /section-intro -->
 
 		
 	</section> <!-- /services -->	
 
-   <!-- resume Section
-   ================================================== -->
-	<section id="resume" class="grey-section">
-
-
-   	<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>A Walkthrough Of My Experience</h2>
-
-   		</div> <!-- /resume-header -->
-
-   		<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Research Assistant</h3>
-	   					<p>April 2024 - Present</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Da Vinci Lab, Professor Jillian Aurisano</h4>
-						<h5>(Data Visualization at Univeristy of Cincinnati Lab)</h3>
-	   					<p>📌 AI-Powered Chatbot Development: Building an intelligent chatbot using LLMs and deep learning.</p>
-						   <p>📌 Integrating prompt engineering with graph and database querying to enhance analytical workflows and user engagement.</p>
-						   <p>📌 Engineering with OpenAI, React and Python, an interactive data exploration platform for meetings and domain-specific presentations.</p>
-						   
-
-	   			</div> <!-- /timeline-block -->
-
-				<div class="timeline-block">
-
-				<div class="timeline-ico">
-					<i class="fa fa-graduation-cap"></i>
-				</div>
-
-				<div class="timeline-header">
-					<h3>Neighbourhood Operating Assitant</h3>
-					<p>April 2024 - Present</p>
-				</div>
-
-				<div class="timeline-content">
-					<h4>University of Cincinnati, Housing</h4>
-					<p> 🧠 Optimized team scheduling using the WhenIWork platform, applying logical workflows to manage shift rotations and ensure operational coverage.
-					<p>🔐 Conducted monthly audits of key and equipment data, maintaining database accuracy and enforcing access control protocols.
-				</div>
-
-				</div> <!-- /timeline-block -->
-
-				   <div class="timeline-block">
-
-					<div class="timeline-ico">
-						<i class="fa fa-graduation-cap"></i>
-					</div>
-
-					<div class="timeline-header">
-						<h3>Software Engineering Fellow </h3>
-						<p>July 2024 - October 2024</p>
-					</div>
-
-					<div class="timeline-content">
-						<h4>HeadStarter, New York</h4>
-						<p>🔹 Tech Stack Explored: Next.js, React, Firebase, Python, AI APIs, Pinecone, OpenAI GPT-4o, Stripe API, Groq Llama 3.1
-							<p>🔹 Tools & Methodologies: Agile, CI/CD, GitHub Actions, Hackathons, Pair Programming
-								<p> 📌 Team Lead for AI Customer Agent: Led a 3-person team, integrating AI with a real-time chat system. </p>
-							<p>📌 Full-Stack Developer on Flashcard SaaS: Implemented the frontend & Stripe API for payment processing. </p>
-							<p>📌 AI Research & Model Optimization: Improved data retrieval efficiency in the RAG pipeline using embedding tuning.</p>
-						 
-					</div>
-
-				</div> <!-- /timeline-block -->
-				<div class="timeline-block">
-
-					<div class="timeline-ico">
-						<i class="fa fa-graduation-cap"></i>
-					</div>
-
-					<div class="timeline-header">
-						<h3>Teacher's Assistant (Java, Data Structures)</h3>
-						<p>August 2022 - August 2024</p>
-					</div>
-
-					<div class="timeline-content">
-						<h4>Vidya Jyothi Institute of Technology</h4>
-						<p>👥 Assisted professors with crafting of periodical assignments and evaluation, organizing academic workshops tailored to diverse student skill levels.</p>
-						<p>📌 Conducted hands-on coding sessions and practical lab support, mentoring students through competitive coding platforms like HackerRank and guiding certification selections.</p>
-						<p>📌 Assisted in research work for data collection, literature review, and implementation of MATLAB and Python data manipulation libraries & tools.</p>
-						 📌 Published Paper: Virtual Study Space
-
-				</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Technical Leader</h3>
-	   					<p>July 2021 - July 2022</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Google Student Developer Club, India</h4>
-							<p>📌 Core Team Leadership: Collaborated with fellow leads to plan and execute campus-wide tech events, coding challenges, and hands-on workshops to foster a developer community.</p>
-							<p>📌 Peer Learning & Mentorship: Facilitated peer-to-peer coding sessions and mentored students in web development, GitHub, and problem-solving through guided sessions and hackathons.</p>
-							<p>📌 Project & Community Development: Contributed to open-source and GDSC projects that tackled real-world problems, while driving outreach to engage diverse student groups in tech initiatives.</p>
-
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			
-
-   			</div> <!-- /timeline-wrap -->   			
-
-   		</div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /resume-timeline -->
-   	
-   	<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>Education</h2>
-
-   		</div> <!-- /resume-header -->
-
-   		<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Masters in Science</h3>
-	   					<p>August 2023 - Present</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>University of Cincinnati, USA | 4 GPA </h4>
-	   					<p> Gained practical experience in cloud computing, algorithm design, data analysis, and machine learning, applying theoretical concepts to real-world problems.
-
-						<p>Developed skills in building scalable systems, optimizing algorithms, and creating predictive models using modern tools and frameworks.
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Bachelor of Technology</h3>
-	   					<p>August 2019 - August 2023</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Vidya Jyothi Institute of Technology, India | 3.95 GPA</h4>
-	   					<p>Developed practical skills through hands-on projects involving Firebase and AWS, strengthening my ability to design and deploy scalable applications.
-
-						<p>Collaborated with cross-functional coding teams to deliver impactful solutions, bridging academic learning with real-world software development and research initiatives.
-							
-							
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-
-   			</div> <!-- /timeline-wrap -->   			
-
-   		</div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /resume-timeline -->
-		
-	</section> <!-- /features -->
-
 
 	<!-- services Section
    ================================================== -->
 	<section id="services">
 
-		<div class="overlay"></div>
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Accomplishments</h5>
-   			<h1>Certifications, Honors & Awards</h1>
-
-   			<p class="lead">Here are my awards and certificates that reflect my commitment to excellence and continuous learning. They include notable online courses and training programs that have enriched my knowledge and skills.</p>
-			</p>
-
-   		</div>   		
-   	</div> <!-- /section-intro -->
-
    	<div class="row services-content">
 
    		<div id="owl-slider" class="owl-carousel services-list">
 
-	      	<div class="service">	
+	      	<div class="services">	
 
-	      		<span class="icon"><i class="icon-earth"></i></span>            
+	      		<span class="icon"><i class="icon-earth"></i></span>           
 
 	            <div class="service-content">	
 
 	            	 <h3>Oracle: Database SQL Certification</h3>
 
-		            <p class="desc"> The training covered essential SQL concepts such as data retrieval, querying, data manipulation, and transaction management. I also learned advanced techniques for optimizing queries, managing database objects, and implementing security measures.</p>
+		            <p> The training covered essential SQL concepts such as data retrieval, querying, data manipulation, and transaction management. I also learned advanced techniques for optimizing queries, managing database objects, and implementing security measures.</p>
 	         		</p>
 	         		
 	         	</div> 	         	 
@@ -568,7 +414,7 @@
 
 	            	<h3>IBM: Data Visualization with Python</h3>  
 
-		            <p class="desc">The course covered data exploration, visualization techniques, and best practices for presenting data effectively. This training enhanced my ability to transform complex datasets into clear, actionable visual insights.</p>
+		            <p> The course covered data exploration, visualization techniques, and best practices for presenting data effectively. This training enhanced my ability to transform complex datasets into clear, actionable visual insights.</p>
 	         		</p>
 
 	            </div>	                          
@@ -583,7 +429,7 @@
 
 	            	<h3>CISCO Networking Essentials Badge</h3>
 
-		            <p class="desc">In this, I acquired foundational knowledge in networking concepts, including IP addressing, network protocols, and configuration of network devices. The course covered troubleshooting network connections, enabling me to design and manage efficient and secure network infrastructures.
+		            <p>In this, I acquired foundational knowledge in networking concepts, including IP addressing, network protocols, and configuration of network devices. The course covered troubleshooting network connections, enabling me to design and manage efficient and secure network infrastructures.
 
 	            </div> 	            	               
 
@@ -597,7 +443,7 @@
 
 	            	<h3>Best Member in Google Student Developer Club</h3>
 
-		            <p class="desc">In the Best Google Student Developer Club course, I gained expertise in leveraging Google’s tools and technologies for developing innovative projects. The course emphasized building practical skills in cloud computing, app development, and collaborative problem-solving, enhancing my ability to create and manage impactful tech solutions.
+		            <p>In the Best Google Student Developer Club course, I gained expertise in leveraging Google’s tools and technologies for developing innovative projects. The course emphasized building practical skills in cloud computing, app development, and collaborative problem-solving, enhancing my ability to create and manage impactful tech solutions.
 	         		</p> 
 	         		
 	            </div>                
@@ -612,7 +458,7 @@
 
 	            	<h3>National Techno-Cultural Fest Winner</h3>
 
-		            <p class="desc">As a National Techno-Cultural Fest winner, I demonstrated exceptional skills in both technology and cultural innovation. This achievement highlights my ability to excel in a competitive environment, showcasing creativity, technical prowess, and a unique blend of cultural understanding.
+		            <p>As a National Techno-Cultural Fest winner, I demonstrated exceptional skills in both technology and cultural innovation. This achievement highlights my ability to excel in a competitive environment, showcasing creativity, technical prowess, and a unique blend of cultural understanding.
 	        			</p> 
 
 	            </div>	               
@@ -627,7 +473,7 @@
 
 	            	 <h3>Best Innovation Idea in Hackathon</h3>
 
-		            <p class="desc">Winning Best Innovation Idea at a hackathon underscored my ability to develop creative and impactful solutions under pressure. This accolade reflects my talent for identifying problems, devising innovative strategies, and executing effective tech-driven ideas.
+		            <p>Winning Best Innovation Idea at a hackathon underscored my ability to develop creative and impactful solutions under pressure. This accolade reflects my talent for identifying problems, devising innovative strategies, and executing effective tech-driven ideas.
 	        			</p> 
 	        			
 	            </div>	               
@@ -651,7 +497,7 @@
 				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
 
 					<div class="bgrid stat">
-
+						
 						<div class="icon-part">
 							<i class="icon-pencil-ruler"></i>
 						</div>
@@ -820,26 +666,7 @@
 
 	
 
-   <!-- footer
-   ================================================== -->
-
-   <footer>
-     	<div class="row">
-
-     		
-
-      	<div class="col-eight tab-full">
-	      	<div class="copyright">
-		        	<span>Nikitha Sharlene Gandham </span> 
-	      	</div>
-
-	      	<div id="go-top">
-		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-		      </div>
-
-      	</div> <!-- /row -->     	
-   </footer>  
-
+   
    <div id="preloader"> 
     	<div id="loader"></div>
    </div> 
